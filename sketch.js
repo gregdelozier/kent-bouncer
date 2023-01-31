@@ -20,8 +20,11 @@ function draw() {
     if ((ball_x < 0) || (ball_x > 400)) {
         ball_dx = - ball_dx;
     }
-    if ((ball_y < 0) || (ball_y > 400)) {
+    if ((ball_y < 20) || (ball_y > 400)) {
         ball_dy = - ball_dy;
+    }
+    if (ball_y < 10) {
+        ball_y = 10;
     }
     ball_dy = ball_dy + 0.1
 }
